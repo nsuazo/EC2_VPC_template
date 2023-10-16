@@ -33,3 +33,9 @@ variable "key_name" {
   type        = string
   default     = "your-key-pair-name"
 }
+
+variable "availability_zone" {
+  description = "The availability zone where the subnet and instance will be created"
+  type        = string
+  default     = "us-west-2a"
+}
