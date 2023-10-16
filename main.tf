@@ -26,7 +26,7 @@ resource "aws_security_group" "example_sg" {
 resource "aws_subnet" "example_subnet" {
   vpc_id                  = aws_vpc.example_vpc.id
   cidr_block              = var.subnet_cidr
-  availability_zone       = "us-east-1a"
+  availability_zone       = var.availability_zone
   map_public_ip_on_launch = true
 
   tags = {
