@@ -5,3 +5,4 @@ ami_id = "ami-07d07d65c47e5aa90"
 instance_type = "t2.micro"
 key_name = "test-keypair"
 availability_zone = "us-west-2a"
+ssh_cidr_blocks = ["YOUR_IP_ADDRESS/32"]
