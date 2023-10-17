@@ -39,3 +39,9 @@ variable "availability_zone" {
   type        = string
   default     = "us-west-2a"
 }
+
+variable "ssh_cidr_blocks" {
+  description = "CIDR blocks allowed for SSH access (e.g., your IP or 0.0.0.0/0 for any IP)"
+  type        = list(string)
+  default     = ["0.0.0.0/0"]
+}
