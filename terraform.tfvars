@@ -7,3 +7,7 @@ key_name = "test-keypair"
 availability_zone = "us-west-2a"
 #ssh_cidr_blocks = ["YOUR_IP_ADDRESS/32"]
 ssh_cidr_blocks = ["34.213.231.214/32"]
+security_group_name = "example-sg"
+ec2_instance_name = "example-instance"
+vpc_name = "example-vpc"
+subnet_name = "example-subnet"
