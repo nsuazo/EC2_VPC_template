@@ -1,7 +1,7 @@
 variable "aws_region" {
   description = "The AWS region where resources will be created"
   type        = string
-  default     = "us-west-2"
+  default     = "us-east-1"
 }
 
 variable "vpc_cidr" {
@@ -19,7 +19,7 @@ variable "subnet_cidr" {
 variable "ami_id" {
   description = "The ID of the Amazon Machine Image (AMI) to use for the EC2 instance"
   type        = string
-  default     = "ami-07d07d65c47e5aa90"
+  default     = "ami-0c55b159cbfafe1f0"
 }
 
 variable "instance_type" {
@@ -28,20 +28,38 @@ variable "instance_type" {
   default     = "t2.micro"
 }
 
-variable "key_name" {
-  description = "The name of the SSH key pair to use for the EC2 instance"
+variable "key_pair_name" {
+  description = "The name of the AWS key pair to use for the EC2 instance"
   type        = string
-  default     = "your-key-pair-name"
-}
-
-variable "availability_zone" {
-  description = "The availability zone where the subnet and instance will be created"
-  type        = string
-  default     = "us-west-2a"
+  default     = "my-keypair"
 }
 
 variable "ssh_cidr_blocks" {
   description = "CIDR blocks allowed for SSH access (e.g., your IP or 0.0.0.0/0 for any IP)"
   type        = list(string)
   default     = ["0.0.0.0/0"]
+}
+
+variable "security_group_name" {
+  description = "The name of the security group"
+  type        = string
+  default     = "example-sg"
+}
+
+variable "ec2_instance_name" {
+  description = "The name of the EC2 instance"
+  type        = string
+  default     = "example-instance"
+}
+
+variable "vpc_name" {
+  description = "The name of the VPC"
+  type        = string
+  default     = "example-vpc"
+}
+
+variable "subnet_name" {
+  description = "The name of the subnet"
+  type        = string
+  default     = "example-subnet"
 }
